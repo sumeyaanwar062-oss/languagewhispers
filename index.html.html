@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language Whispers – Free Turkish Lessons</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  animation: fadeUp 1.5s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* Animated Gradient Background */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(-45deg, #f5af19, #f12711, #ff6b6b, #ffb347);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+/* Circle Logo */
+.logo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  display: block;
+  margin: 0 auto 20px auto;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+/* Brand Name */
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  margin: 10px 0;
+  text-shadow: 3px 3px rgba(0,0,0,0.3);
+}
+/* Tagline */
+.tagline {
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 30px;
+  animation: fadeIn 3s ease forwards, pulse 2s infinite;
+  opacity: 0;
+  text-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+/* Registration Form */
+form {
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+}
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: #f12711;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+/* Social Buttons */
+.social {
+  display: block;
+  width: 70%;
+  max-width: 400px;
+  margin: 15px auto;
+  padding: 18px 0;
+  border-radius: 12px;
+  background: white;
+  color: #f12711;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+footer {
+  margin-top: 30px;
+  font-size: 16px;
+}
+</style>
+<script>
+// Floating Bubbles
+for (let i = 0; i < 20; i++) {
+  let bubble = document.createElement("div");
+  bubble.style.position = "fixed";
+  bubble.style.width = bubble.style.height = Math.random() * 10 + 5 + "px";
+  bubble.style.background = "rgba(255,255,255,0.3)";
+  bubble.style.borderRadius = "50%";
+  bubble.style.left = Math.random() * 100 + "vw";
+  bubble.style.top = Math.random() * 100 + "vh";
+  bubble.style.animation = "floatBubble " + (Math.random() * 10 + 5) + "s linear infinite";
+  document.body.appendChild(bubble);
+}
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes floatBubble {
+  0% { transform: translateY(0); opacity: 0.7; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}`;
+document.head.appendChild(style);
+</script>
+</head>
+<body>
+<div class="glass">
+  <!-- Logo -->
+  <img src="logo.png" alt="Language Whispers Logo" class="logo">
+  <h1>Language Whispers</h1>
+  <p class="tagline">Whispers today, speak loud tomorrow</p>
+
+  <!-- Registration Form -->
+  <form action="https://formsubmit.co/sumeyaanwar062@gmail.com" method="POST">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <select name="Level" required>
+      <option disabled selected>Select Your Level</option>
+      <option>Beginner</option>
+      <option>I know basic words</option>
+      <option>Intermediate</option>
+    </select>
+    <button type="submit">Register Now</button>
+  </form>
+
+  <!-- Social Links -->
+  <a href="https://www.youtube.com/@language_Whispers" target="_blank" class="social">📺 YouTube @language_whispers</a>
+  <a href="https://t.me/language_whispers1" target="_blank" class="social">💬 Telegram @language_whispers1</a>
+  <a href="https://www.tiktok.com/@language_whispers1" target="_blank" class="social">🎵 TikTok @language_whispers1</a>
+
+  <footer>
+    Join our community and learn Turkish for free!
+  </footer>
+</div>
+</body>
+</html>
